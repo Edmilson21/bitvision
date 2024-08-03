@@ -1,2 +1,2 @@
 # bitvision
-Esta es una pagina web donde partillo mis servicios en la ramas de la informática.
+Esta es una página web donde comparto mis servicios en las ramas de la informática.
