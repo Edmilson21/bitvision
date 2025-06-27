@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <!--<link rel="stylesheet" href="static/fontawesome 6.5.1/css/all.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   <link rel="stylesheet" href="static/bootstrap-5.2.3/css/bootstrap-grid.min.css">
+     
+    <link rel="icon" type="image/x-icon" href="img/saturno22.png"> 
+    <link rel="stylesheet" href="static/estilo.css">
+    <title>Edmilson Portafolio</title>
+    <!-- Enviar Correo -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+    emailjs.init('LSSMlJESmEXK3-Fru')  
+    </script> 
+  
+</head> 
+<body> 
+          <!-- Botón de cambio de idioma -->
+          <div class="language-switch">
+            <button id="btn-en" class="lang-btn">
+              <img src="img/uk2.png" alt="Inglés" class="flag">
+            </button>
+            <button id="btn-es" class="lang-btn hidden">
+              <img src="img/españa.png" alt="Español" class="flag">
+            </button>
+          </div>
+
+    <!-- SECCION I N I C I O --> 
+    <section id="inicio" style=" background: linear-gradient( rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('img/desarrollo-de-paginas-web-programacion.jpg'); background-size: cover;">
+        <div class="contenido"> 
+            <header>
+                <div class="contenido-header">
+                    <h1>/E.C/</h1>
+                    <nav id="nav" class="">
+                        <ul id="links"> 
+                            <li><a href="#inicio" class="seleccionado" onclick="seleccionar(this)" data-key="inicio">INICIO</a></li>
+                            <li><a href="#sobremi" onclick="seleccionar(this)" data-key="sobremi">SOBRE MI</a></li>
+                            <li><a href="#servicios" onclick="seleccionar(this)" data-key="servicios">SERVICIOS</a></li>
+                            <li><a href="#portfolio" onclick="seleccionar(this)" data-key="portfolio">PROYECTOS</a></li> 
+                            <li><a href="#contacto" onclick="seleccionar(this)" data-key="contacto">CONTACTO</a></li>
+                        </ul>  
+                    </nav>
+
+                    <!-- Icono del menu responsive --> 
+                    <div id="icono-nav" onclick="responsiveMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+
+                    <div class="redes">
+                        <a href="https://www.linkedin.com/in/edmilson-lu%C3%ADs-carlos-nascimento-0245a41b4/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Edmilson21" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </header>
+            <div class="presentacion">
+                <p class="bienvenida" data-key="bem_vindo">Bienvenido</p>
+                <h2 data-key="soy" style="font-size: 30px;">Soy Edmilson Carlos, Desarrollador Python</h2>
+                <p class="descripcion" data-key="descricao">Soy un apasionado por la tecnologia </p>
+                <a href="#portfolio" data-key="projectos">Ir a PROYECTOS</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- SECCION S O B R E M I -->
+    <section id="sobremi">
+        <div class="contenedor-foto">
+            <img src="img/yo.png" alt="mi foto">
+        </div>
+        <div class="sobremi">
+            <p class="titulo-seccion" data-key="sobre_mim">Sobre Mi</p>
+            <h2 data-key="hola">Hola, Soy Edmilson Carlos</h2>
+            <h3 data-key="desenvolvedor">Desarrollador Python</h3>
+            <p data-key="informacao_big">Hola, mi nombre es Edmilson Luís Carlos Nascimento y soy ingeniero informático. Me dedico a la creación de páginas web, sistemas de visión por computador con inteligencia artificial, mantenimiento de ordenadores y reparaciones.
+            Tengo más de 2 años de experiencia, ofrezco soluciones personalizadas para cada cliente, asegurándome de satisfacer sus necesidades tecnológicas.</p>
+            <a href="cv/CV_Edmilson.pdf" download="CV_Edmilson.pdf"  target="_blank" rel="noopener noreferrer" data-key="baixar_cv">Descargar CV</a>
+        </div>
+    </section>
+
+    <!-- SECCION S E R V I C I O S -->
+    <section id="servicios">
+        <h3 class="titulo-seccion" data-key="serviços">MIS SERVICIOS</h3>
+        <div class="fila">
+            <div class="servicio">
+                <span class="icono"> <i class="fa-solid fa-code"></i></span>
+                <h4 data-key="creacion">Creación de páginas Web</h4>
+                <hr>
+                <p data-key="utilizo">Utilizo las mejores herramientas (tecnologías) para el desarrollo web</p>
+            </div>
+            <div class="servicio">
+                <span class="icono"><i class="fa-brands fa-python"></i></span>
+                <h4 data-key="programacao">Programación Python</h4>
+                <hr>
+                <p data-key="python">Python es un lenguaje muy versátil, y por este motivo lo utilizo para desarrollar distintos proyectos.</p>
+            </div>
+            <div class="servicio">
+                <span class="icono"><i class="fa-solid fa-eye"></i></span>
+                <h4>Computer Vision</h4>
+                <hr>
+                <p data-key="cv_descriçao">La visión por computador, o visión artificial, es el campo con más desafíos y uno de los que más crece dentro de la inteligencia artificial.</p>
+            </div>
+        </div>
+        <div class="fila">
+            <div class="servicio">
+                <span class="icono"><i class="fa-brands fa-windows"></i></span>
+                <h4 data-key="basico">Instalación de Sistemas Operativos Y Mantenimiento</h4>
+                <hr>
+                <p data-key="basico1">Instalo sistemas operativos como Windows y Linux, además de esto realizo el mantenimiento de tu ordenador.</p>
+            </div>
+            <div class="servicio">
+                <span class="icono"><i class="fa-solid fa-users"></i></span>
+                <h4 data-key="redes_sociais">Gestión de Redes Sociales</h4>
+                <hr>
+                <p data-key="redes_info">Ofrezco servicios básicos de gestión de redes sociales, ayudando a mejorar la presencia en línea.</p>
+            </div>
+            <div class="servicio">
+                <span class="icono"><i class="fa-solid fa-video"></i></span>
+                <h4 data-key="videos">Edición de videos</h4>
+                <hr>
+                <p data-key="videos_info">Realizo edición de videos publicitarios utilizando herramientas prácticas como CapCut, combinando creatividad con mis conocimientos en informática.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION H A B I L I D A D E S -->
+    <div class="contenedor-skills" id="skills" style=" background: linear-gradient( #000000cc, rgba(107, 141, 8, 0.8)), url('img/fondo-inicio.jpg');
+    background-attachment: fixed; background-repeat: no-repeat;   background-size: cover; color: #ffffff; background-position: center center;">
+        <h3 data-key="habilidades">HABILIDADES TECNOLÓGICAS</h3>
+        <div class="skill">
+            <div class="info">
+                <p> <span class="lista"> </span>Html & Css</p>
+                <span class="porcentaje">95%</span>
+            </div>
+
+            <div class="barra">
+                <div class="" id="html"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="info">
+                <p> <span class="lista"> </span>Javascript</p>
+                <span class="porcentaje">90%</span>
+            </div>
+
+            <div class="barra">
+                <div class="" id="js"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="info">
+                <p> <span class="lista"> </span>C++</p>
+                <span class="porcentaje">85%</span>
+            </div>
+
+            <div class="barra">
+                <div class="" id="bd"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="info">
+                <p> <span class="lista"> </span>Python</p>
+                <span class="porcentaje">95%</span>
+            </div>
+
+            <div class="barra">
+                <div class="" id="ps"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCION PORTAFOLIO -->
+    <section id="portfolio">
+        <h3 class="titulo-seccion" data-key="mis_proyectos">Mis Proyectos</h3>
+        <div class="fila">
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="img/Computer_vision.webp" alt="">
+                <div class="info">
+                    <h4 data-key="frutas">Detector_de_Frutas</h4>
+                    <p>Computer Vision</p>
+                    <a href="https://youtu.be/SQAV7DBUXd8" target="_blank" rel="noopener noreferrer"><div class="ver"><strong data-key="ver">Ver</strong></div></a>
+                </div>
+            </div>
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="img/Computer_vision.webp" alt="">
+                <div class="info">
+                    <h4>Scanner_Document</h4>
+                    <p>Computer Vision</p>
+                    <a href="https://youtu.be/ItxkkpQw798" target="_blank" rel="noopener noreferrer"><div class="ver"><strong data-key="ver">Ver</strong></div></a>
+                </div>
+            </div>
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="img/Computer_vision.webp" alt="">
+                <div class="info">
+                    <h4>Control_Parking</h4>
+                    <p>Computer Vision</p>
+                    <a href="https://youtu.be/9BOEH2bowiE" target="_blank" rel="noopener noreferrer"><div class="ver"><strong data-key="ver">Ver</strong></div></a>
+                </div>
+            </div>
+        </div>
+        <div class="fila">
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="img/Computer_vision.webp" alt="">
+                <div class="info">
+                    <h4>Things_Detector</h4>
+                    <p>Computer Vision</p>
+                    <a href="https://youtu.be/2mVMZLiPlos" target="_blank" rel="noopener noreferrer"><div class="ver"><strong data-key="ver">Ver</strong></div></a>
+                </div>
+            </div>
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="img/js.jpg" alt=""> 
+                <div class="info">
+                    <h4>Ecommerce</h4>
+                    <p data-key="web">Desarrollo Web</p>
+                    <a href="https://youtu.be/ElwLuMHUOFI" target="_blank" rel="noopener noreferrer"><div class="ver"><strong data-key="ver">Ver</strong></div></a>
+                </div>
+            </div>
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="img/js.jpg" alt="">
+                <div class="info">
+                    <h4>Aleatory_Color</h4>
+                    <p data-key="web">Desarrollo Web</p>
+                    <a href="https://youtu.be/MVufMbekjYU" target="_blank" rel="noopener noreferrer"><div class="ver"><strong data-key="ver">Ver</strong></div></a>
+                </div>
+            </div>
+        </div>
+        <div class="fila">
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="img/web3.jpg" alt="">
+                <div class="info">
+                    <h4>Automatic_Personal_Trainer</h4>
+                    <p data-key="otros">Otros</p>
+                    <a href="https://youtu.be/uqHqDHYDbYE" target="_blank" rel="noopener noreferrer"><div class="ver"><strong data-key="ver">Ver</strong></div></a>
+                </div>
+            </div>
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="img/web3.jpg" alt="">
+                <div class="info">
+                    <h4>Face Detector</h4>
+                    <p data-key="otros">Otros</p>
+                    <a href="https://youtu.be/0P817qiiVZA" target="_blank" rel="noopener noreferrer"><div class="ver"><strong data-key="ver">Ver</strong></div></a>
+                </div>
+            </div>
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="img/web3.jpg" alt="">
+                <div class="info"> 
+                    <h4 data-key="barberia">Página Web_(barbería)</h4>
+                    <p data-key="otros">Otros</p>
+                    <a href="https://youtu.be/MReOSN8SCCg" target="_blank" rel="noopener noreferrer"><div class="ver"><strong data-key="ver">Ver</strong></div></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCTION C O N T A C T O -->
+    <section id="contacto">
+        
+        <div class="container-lg-steech" style="margin-top: 0rem; margin-bottom: 3rem; background-color:#ffffffed; padding-bottom: 2rem;  padding-top: 4rem;">
+            <h3 class="titulo-seccion" style="text-align: center; margin-bottom: 2rem; text-transform: uppercase;
+            color: #000000;
+            text-decoration: underline;
+            text-decoration-color: #d3d3d3;
+            text-decoration-thickness: 5px; font-size: 22px;" data-key="contacto">Contacto</h3>
+          
+            <div class="divformulario">
+
+              <form id="form">
+                <div class="mb-3">
+                  <label for="to_name" class="form-label" data-key="nombre">Nombre</label>
+                  <input type="name" class="form-control" id="to_name" placeholder="Tu nombre" name="to_name" required>
+                </div>
+                <div class="mb-3">
+                  <label for="email_id" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email_id" placeholder="nombre@example.com" name="email_id" required>
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Textarea</label>
+                  <textarea class="form-control" id="message" rows="3" name="message" required></textarea>
+                </div>
+            
+                <button type="submit" class="btn black" id="button" data-key="enviar">Enviar</button>
+              </form>
+            </div>
+            </div>
+    </section>
+
+    <!-- SECCION FOOTER -->
+    <section>
+        <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
+          <img class="footer-logo"  src="img/bitvision2.png" alt="Logo">
+          <p class="footer-texto text-center" style="color: #ffffff;" data-key="footer1">Pasión por la Calidad.</p> 
+          <div style="color: #ffffff;"><i class="fa-solid fa-phone">    641 484 438</i></div><br>
+          
+          <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
+    
+              <a href="https://github.com/Edmilson21" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-github"></i>
+              </a>
+    
+              <a href="https://www.linkedin.com/in/edmilson-lu%C3%ADs-carlos-nascimento-0245a41b4/" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-linkedin"></i>
+              </a> 
+    
+              <a href="mailto:edmilsoncarlosn94@gmail.com" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-solid fa-envelope"></i>
+              </a>
+          </div>
+          <div class="derechos-de-autor" data-key="footer2">
+            Creado por Edmilson Carlos (<span id="current-year"></span>) &#169;
+        </div>
+      </footer>
+      </section>
+ 
+    <script src="static/script.js"></script>
+</body>
+</html> 
